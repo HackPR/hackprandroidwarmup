@@ -1,0 +1,108 @@
+package com.mmarquezpr.lifecycledemo;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.widget.ListView;
+
+public class MainActivity extends Activity {
+
+	
+	//Key Value Constants
+	private static String onCreateKey = "onCreateKey";
+	private static String onStartKey = "onStartKey";
+	private static String onResumeKey = "onResumeKey";
+	private static String onPauseKey = "onPauseKey";
+	private static String onStopKey = "onStopKey";
+	private static String onDestroyKey = "onDestroyKey";
+	private static String onRestartKey = "onRestartKey";
+	
+	
+	//Lifecycle Demo
+	
+	//Instance Fields
+	private SharedPreferences pref; //Object that References Shared Preferences File in the Application
+	private ListView lvLifeCylcleCounter;
+	
+	
+	
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        //Change Tittle for Fun
+        this.getActionBar().setTitle("Lifecycle Counter");
+        
+        //Get Object SharedPreferences Editors always run
+        this.pref = this.getPreferences(Context.MODE_PRIVATE);
+        
+        //Obtain List View from ID
+        this.lvLifeCylcleCounter = (ListView) findViewById(R.id.lv_content);
+        
+        //Add to Shared Pref Counter
+        this.addToCounter(onCreateKey);
+    }
+    
+    @Override
+    protected void onStart() {
+    	super.onStart();
+    	//Add to Shared Pref Counter
+    	this.addToCounter(onStartKey);
+    }
+    
+    @Override
+    protected void onResume() {
+    	super.onResume();
+    	//Add to Shared Pref Counter
+    	this.addToCounter(onResumeKey);
+    	this.updateListView();
+    	
+    }
+    
+    
+    @Override
+    protected void onPause() {
+    	super.onPause();
+    	
+    	this.addToCounter(onPauseKey);
+    }
+    
+    @Override
+    protected void onStop() {
+    	super.onStop();
+    	//Add to Shared Pref Counter
+    	this.addToCounter(onStopKey);
+    }
+    
+    @Override
+    protected void onDestroy() {
+    	super.onDestroy();
+    	
+    	//Add to Shared Pref Counter
+    	this.addToCounter(onDestroyKey);
+    	
+    }
+    
+    @Override
+    protected void onRestart() {
+    	super.onRestart();
+    }
+    
+    
+    
+    
+    private void addToCounter(String key){
+    	
+    }
+    
+    private void updateListView(){
+    	
+    }
+    
+    
+    
+        
+}

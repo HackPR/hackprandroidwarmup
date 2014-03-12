@@ -1,0 +1,5 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/ab_finish" android:orderInCategory="1000" android:showAsAction="always" android:title="@string/ab_finish"></item>
+    <item android:id="@+id/ab_dialog" android:showAsAction="always" android:title="@string/ab_dialog" android:orderInCategory="1200"></item>
+
+</menu>

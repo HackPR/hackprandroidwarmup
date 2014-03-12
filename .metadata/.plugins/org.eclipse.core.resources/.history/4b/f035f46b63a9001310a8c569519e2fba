@@ -1,0 +1,75 @@
+package com.mmarquezpr.lifecycledemo;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.Menu;
+
+public class MainActivity extends Activity {
+
+	//Lifecycle Demo
+	
+	//Instance Fields
+	private SharedPreferences pref; //Object that References Shared Preferences File in the Application
+	
+	
+	
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        
+        //Change Tittle for Fun
+        this.getActionBar().setTitle("Lifecycle Counter");
+        
+        //Get Object SharedPreferences Editors always run
+        this.pref = this.getPreferences(Context.MODE_PRIVATE);
+        
+        
+        
+        
+    }
+    
+    @Override
+    protected void onStart() {
+    	// TODO Auto-generated method stub
+    	super.onStart();
+    }
+    
+    @Override
+    protected void onResume() {
+    	// TODO Auto-generated method stub
+    	super.onResume();
+    }
+    
+    
+    @Override
+    protected void onPause() {
+    	// TODO Auto-generated method stub
+    	super.onPause();
+    }
+    
+    @Override
+    protected void onStop() {
+    	// TODO Auto-generated method stub
+    	super.onStop();
+    }
+    
+    @Override
+    protected void onDestroy() {
+    	// TODO Auto-generated method stub
+    	super.onDestroy();
+    }
+    
+    @Override
+    protected void onRestart() {
+    	// TODO Auto-generated method stub
+    	super.onRestart();
+    }
+    
+    
+    
+        
+}

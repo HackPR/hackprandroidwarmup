@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/lvrow_counter_key"
+        android:textColor="@android:color/white"
+        android:layout_width="0dp"
+        android:textSize="22sp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:text="@string/lv_row_counter_name"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:gravity="center"
+         android:textColor="@android:color/white"
+        android:id="@+id/lvrow_counter_value"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/lv_row_counter_number"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</LinearLayout>
