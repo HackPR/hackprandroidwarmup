@@ -1,0 +1,5 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/ab_btn_camera" android:title="@string/ab_btn_camera" android:orderInCategory="1000" android:showAsAction="always|withText" android:icon="@drawable/btn_camera"></item>
+    <item android:id="@+id/ab_btn_clock" android:title="@string/ab_btn_clock" android:orderInCategory="500" android:icon="@drawable/btn_clock" android:showAsAction="always"></item>
+
+</menu>

@@ -1,0 +1,25 @@
+package com.mmarquez.desingdemo.activities;
+
+import android.app.ActionBar;
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+
+import com.mmarquez.desingdemo.R;
+
+public class ReturnActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_return);
+        
+        final ActionBar ab = this.getActionBar();
+        ab.setTitle("Return Activity");
+        
+        
+    }
+
+
+    
+}

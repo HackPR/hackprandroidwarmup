@@ -1,0 +1,35 @@
+package com.mmarquez.designdemo.fragments;
+
+
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+import com.mmarquez.desingdemo.activities.R;
+
+public class ColorFragment extends Fragment {
+
+	private View block;
+	private Spinner spinner;
+	private String[] colors = new String[]{"Grey", "Blue", "Black", "White", "Red","Green"};
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		//Get View from inflater
+		View view = inflater.inflate(R.layout.fragment_color, container, false);
+		
+		this.spinner = (Spinner) view.findViewById(R.id.spinner_color_frag);
+		this.block =  view.findViewById(R.id.block_color);
+	
+		this.spinner.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, colors));
+		
+		
+		return view;
+	}
+	
+}

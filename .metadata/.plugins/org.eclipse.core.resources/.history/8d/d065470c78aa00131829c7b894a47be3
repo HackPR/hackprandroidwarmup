@@ -1,0 +1,7 @@
+package com.mmarquez.designdemo.fragments;
+
+import android.app.Fragment;
+
+public class NumberFragment extends Fragment {
+
+}
